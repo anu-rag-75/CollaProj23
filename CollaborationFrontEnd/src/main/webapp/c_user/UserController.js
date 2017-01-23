@@ -100,13 +100,10 @@ app.controller('UserController',['$http','$scope','UserService','$location','$ro
 							
 							 if(self.user.status=='R')
 								   {
-								 
 								 alert("Your registration  is Rejected. Please contact Admin");
 									   user.setErrorCode("404");
 									   user.setErrorMessage("Your registration is Rejected. Please contact Admin");
 								   }
-							 
-							
 							if(self.user.status=='N')
 								
 								{

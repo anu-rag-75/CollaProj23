@@ -34,9 +34,6 @@ public class ForumController {
 	@Autowired
 	private Forum forum;
 
-	
-	
-	
 	@GetMapping("/ForumDetails/")
 	public ResponseEntity<List<Forum>> listAllUserDetails(){
 		List<Forum> forums = forumDAO.list();

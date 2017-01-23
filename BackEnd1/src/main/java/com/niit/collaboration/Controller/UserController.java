@@ -129,8 +129,9 @@ public class UserController {
 	   
 	  /* user = userDAO.get(user.getId());*/
 	  /* user = userDAO.get(id);*/
-	   
-	   if(userDAO.get(id) == null)
+	   Logger.debug("Got:-"+userDAO.get(id));
+	   //userDAO.get(id)
+	   if(user.getId() == null)
 	   { 
 		   Logger.debug("->->->->User does not exist with id "+ user.getId());
 		   user = new User();

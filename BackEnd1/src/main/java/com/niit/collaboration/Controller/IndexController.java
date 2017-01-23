@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.RequestMethod;
 
 public class IndexController {
 
-	@CrossOrigin(origins="http://localhost:8082")
+	@CrossOrigin(origins="http://localhost:8090")
 	@RequestMapping(value="/",method = RequestMethod.GET)
 	public String getIndexPage() {
 		return "index";

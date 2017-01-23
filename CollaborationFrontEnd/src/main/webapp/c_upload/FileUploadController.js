@@ -20,7 +20,7 @@ self.submit = function(id){
 	}
 }
 
-	var  BASE_URL="http://localhost:8082/CollaboartionBackEnd"
+	var  BASE_URL="http://localhost:8090/BackEnd1"
 		 self.uploadimage = function(id){
          return (BASE_URL+'/upload')
          .then(

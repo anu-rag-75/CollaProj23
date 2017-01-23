@@ -68,6 +68,7 @@ app.controller('JobController',function(JobService,$scope,$location,$rootScope){
 	
 		self.getMyAppliedJobs=function(){
 			console.log('calling the method getMyAppliedJobs');
+			alert("Applied jobs");
 			JobService.getMyAppliedJobs()
 			   .then(function(d){
 				self.jobs=d;

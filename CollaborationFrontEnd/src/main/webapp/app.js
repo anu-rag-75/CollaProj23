@@ -9,17 +9,17 @@ app.config(function($routeProvider){ //The config() takes a function which takes
 		controller : 'HomeController'
 	})
 	
-	.when('/manage_users',{  //when() method takes a pathand a route as parameters.
+	.when('/manage_users',{  //when() method takes a path and a route as parameters.
 		templateUrl : 'c_admin/manage_users.html',
 		controller : 'UserController'
 	})
 	
-	.when('/manage_jobs',{ //when() method takes a panthad a route as parameters.
+	.when('/manage_jobs',{ 
 		templateUrl  :  'c_admin/manage_jobs.html',
 		controller   :  'UserController'
 	})
 	
-	.when('/manage_friends',{//when() method takes a panthad a route as parameters.
+	.when('/manage_friends',{
 		templateUrl  : 'c_admin/manage_friends.html',
 		controller   :  'UserController'
 	})
@@ -50,12 +50,7 @@ app.config(function($routeProvider){ //The config() takes a function which takes
 		controller : 'ForumController'	
 })
    
-   /*.when('/event',{
-	templateUrl : 'c_event/event.html',
-	controller : 'EventController'
-   })*/
-   
-   .when('/about',{
+  .when('/about',{
 	templateUrl : 'c_about/about.html',
 	controller : 'AboutController'
    })
@@ -153,7 +148,7 @@ app.config(function($routeProvider){ //The config() takes a function which takes
 	app.run(function($rootScope, $location, $cookieStore, $http){
 	 $rootScope.$on('$locationChangeStart', function (event, next, current) {
 		 console.log("$locationChangeStart")
-		  //http://localhost:8081/Collaboration/addjob
+		  //http://localhost:8090/Backend1/addjob
 	         //redirect to login page if not logged in and trying to access a restricted page
 		  
 		 var restrictedPage=$.inArray($location.path(),['//','/','/search_job','/view_blog','/register','/list_blog'])=== -1;
@@ -168,7 +163,8 @@ app.config(function($routeProvider){ //The config() takes a function which takes
 			$location.path('/login');
 		 }
 	 });
-*/	 if (!loggedIn) 
+*/	 
+		 if (!loggedIn) 
      {
     	 
     	 if(restrictedPage) {
@@ -186,7 +182,7 @@ app.config(function($routeProvider){ //The config() takes a function which takes
     	 
     	 if (userRestrictedPage && role!='admin')
     		 {
-    		 alert("You cannot do this operation as you are not logged in as:"+role)
+    		 alert("You cannot do this operation as you are logged in as:"+role)
     		 $location.path('/login');
     		 }
     	 }
@@ -200,8 +196,3 @@ app.config(function($routeProvider){ //The config() takes a function which takes
 		 $http.defaults.headers.common['Authorization']='Basic'+$rootScope.currentUser;
 		 }
 });
-
-
-
-
-

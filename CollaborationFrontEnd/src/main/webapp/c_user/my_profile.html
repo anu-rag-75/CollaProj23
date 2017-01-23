@@ -2,14 +2,14 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Insert title here</title>
+<title>User Profile</title>
 </head>
 <body>
 
 <div class="container" ng-controller="UserController as ctrl">
-
+<br/><br/><br/>
 <button type="button" ng-click="ctrl.usermyprofile()"   class="btn btn-warning btn-sm">View Ur Profile</button>
- &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;
+ &nbsp;&nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 <button type="button" ng-click="getform = !getform" class="btn btn-warning btn-sm">Edit Ur Profile</button>
 <div class="form-group">
 <br>
@@ -22,14 +22,7 @@ MOBILE NO:<label>{{ctrl.user.mob_no}}</label><br>
 ADDRESS:<label>{{ctrl.user.address}}</label><br>
 GENDER:<label>{{ctrl.user.gender}}</label><br>
 
-<!-- NAME:<label>{{currentUser.name}}</label><br>
-EMAIL:<label>{{currentUser.email}}</label><br>
-PASSWORD:<label>{{currentUser.password}}</label><br>
-DATE OF BIRTH:<label>{{currentUser.dob}}</label><br>
-MOBILE NO:<label>{{currentUser.mob_no}}</label><br>
-ADDRESS:<label>{{currentUser.address}}</label><br>
-GENDER:<label>{{currentUser.gender}}</label><br> -->
-                 
+           
 </div>
 
 <div class="formcontainer">
@@ -109,11 +102,7 @@ GENDER:<label>{{currentUser.gender}}</label><br> -->
 </div>
 </div>
 </form>
-</div></div>
-
+</div>
+</div>
 </body>
 </html>
-
-
-
-

@@ -18,7 +18,7 @@ import org.springframework.web.multipart.MultipartFile;
 @MultipartConfig(fileSizeThreshold = 20971520)
 public class FileUploadController {
 	
-	@CrossOrigin(origins="http://localhost:8082")
+	@CrossOrigin(origins="http://localhost:8090")
 	@RequestMapping(value="/upload")
 	public String uploadFile(@RequestParam("uploadedFile") MultipartFile uploadedFile) {
 		
@@ -26,7 +26,7 @@ public class FileUploadController {
 		String fileName = uploadedFile.getOriginalFilename();
 		
 		//Path where the uploaded file will be stored.
-		String path = "E:/" + fileName;
+		String path = "D:/" + fileName;
 		
 		//String path = "E:/Ashwath/" + fileName;
 		

@@ -100,21 +100,14 @@ public class JobController {
 		}
 		 return new ResponseEntity<Job> (job , HttpStatus.OK);
 	}
-	
-	
-
-	
-	
-	
+		
 	@RequestMapping(value="/getJobDetails/{JobID}", method = RequestMethod.GET)
 	public ResponseEntity<Job> getJobDetails(@PathVariable("JobID") int JobID) {
 		logger.debug("Starting of the method getJobDetails");
 		Job job= jobDAO.getJobDetails(JobID);
 		return new ResponseEntity<Job>(job, HttpStatus.OK);
 	}
-	
-	
-	
+		
 	@RequestMapping(value="/getAllJobDetails/{jobID}", method  = RequestMethod.PUT)
 	public ResponseEntity<Job> getAllJobDetails(@RequestParam("jobID")int jobID, HttpSession httpSession){
 		logger.debug("Starting of the method getAllJobDetails");
@@ -208,10 +201,7 @@ public class JobController {
 		  
 		  jobApplication.setStatus('A');
 		  jobApplication.setRemarks("C");
-		  jobDAO.updateJobApplication(jobApplication); 
-		  
-		   
+		  jobDAO.updateJobApplication(jobApplication);    
 		   return new ResponseEntity<JobApplication>(jobApplication, HttpStatus.OK);
 	   }
-
 }
